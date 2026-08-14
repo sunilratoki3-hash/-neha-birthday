@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Neha ❤️</title>
+<title>For Neha 💗</title>
 
 <style>
 *{
@@ -13,232 +14,383 @@
 }
 
 body{
-    min-height:100vh;
-    font-family: "Poppins", Arial, sans-serif;
-    background:linear-gradient(135deg,#16001f,#3b0a45,#120018);
+    height:100vh;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    background:#050008;
     color:white;
-    overflow-x:hidden;
 }
 
-.container{
-    min-height:100vh;
+/* ---------- INTRO ---------- */
+
+.intro{
+    position:fixed;
+    inset:0;
+    z-index:20;
     display:flex;
-    align-items:center;
+    flex-direction:column;
     justify-content:center;
-    padding:25px;
-    position:relative;
-}
-
-.card{
-    width:100%;
-    max-width:520px;
-    padding:35px 25px;
+    align-items:center;
     text-align:center;
-    border:1px solid rgba(255,255,255,.18);
-    background:rgba(255,255,255,.08);
-    backdrop-filter:blur(15px);
-    border-radius:28px;
-    box-shadow:0 20px 70px rgba(0,0,0,.45);
-    animation:fadeUp 1.2s ease;
+    background:
+      radial-gradient(circle at center,#3b073d 0%,#120014 40%,#050008 100%);
+    transition:1s ease;
 }
 
-.small{
-    font-size:14px;
-    letter-spacing:3px;
-    opacity:.75;
+.intro.hide{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(1.2);
+}
+
+.intro small{
+    letter-spacing:5px;
+    opacity:.7;
     margin-bottom:15px;
 }
 
-h1{
-    font-size:clamp(38px,11vw,68px);
-    margin-bottom:10px;
-    background:linear-gradient(90deg,#fff,#ffb6e8,#fff);
-    -webkit-background-clip:text;
-    color:transparent;
+.intro h1{
+    font-size:clamp(35px,10vw,65px);
+    margin-bottom:30px;
 }
 
-.subtitle{
-    font-size:16px;
-    line-height:1.7;
-    opacity:.85;
-    margin-bottom:28px;
-}
-
-button{
-    border:0;
-    padding:15px 28px;
+.start{
+    border:1px solid rgba(255,255,255,.4);
+    background:rgba(255,255,255,.08);
+    color:white;
+    padding:15px 35px;
     border-radius:50px;
-    font-size:15px;
-    font-weight:bold;
+    font-size:16px;
     cursor:pointer;
-    background:white;
-    color:#5b0b58;
-    box-shadow:0 8px 30px rgba(255,255,255,.18);
-    transition:.3s;
+    backdrop-filter:blur(10px);
+    animation:pulse 2s infinite;
 }
 
-button:hover{
-    transform:translateY(-3px) scale(1.03);
-}
+/* ---------- MAIN ---------- */
 
-#surprise{
+.main{
+    height:100vh;
+    position:relative;
     display:none;
-    animation:fadeUp 1s ease;
-}
-
-.message{
-    margin-top:25px;
-    text-align:left;
-    line-height:1.8;
-    font-size:15px;
-    opacity:.92;
-}
-
-.message p{
-    margin-bottom:16px;
-}
-
-.signature{
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    margin-top:25px;
-    font-size:18px;
+    overflow:hidden;
 }
 
-.heart{
-    position:fixed;
-    bottom:-30px;
-    font-size:20px;
-    animation:floatUp linear forwards;
-    pointer-events:none;
-    opacity:.8;
+.main.show{
+    display:flex;
 }
 
-.confetti{
-    position:fixed;
-    width:8px;
-    height:14px;
-    top:-20px;
-    animation:fall 3s linear forwards;
-    pointer-events:none;
+.bg{
+    position:absolute;
+    inset:0;
+    background:
+      radial-gradient(circle at 50% 40%,#7b176f 0%,#2c0730 28%,#08000c 70%);
+    animation:bgMove 8s infinite alternate;
 }
 
-@keyframes fadeUp{
+@keyframes bgMove{
+    from{transform:scale(1);}
+    to{transform:scale(1.15);}
+}
+
+/* stars */
+
+.stars{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;transform:scale(.5);}
+    to{opacity:1;transform:scale(1.5);}
+}
+
+/* card */
+
+.card{
+    position:relative;
+    z-index:5;
+    width:min(90%,390px);
+    padding:35px 25px;
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:30px;
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 60px rgba(255,70,190,.18);
+    animation:cardIn 1.5s cubic-bezier(.17,.67,.3,1.3);
+}
+
+@keyframes cardIn{
     from{
         opacity:0;
-        transform:translateY(25px);
+        transform:translateY(100px) scale(.7);
     }
     to{
         opacity:1;
-        transform:translateY(0);
+        transform:translateY(0) scale(1);
     }
 }
 
-@keyframes floatUp{
+.emoji{
+    font-size:60px;
+    animation:float 2.5s ease-in-out infinite;
+}
+
+@keyframes float{
+    50%{transform:translateY(-12px) rotate(5deg);}
+}
+
+.card h1{
+    margin-top:15px;
+    font-size:38px;
+    background:linear-gradient(90deg,#fff,#ff8bd8,#fff);
+    background-size:200%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:shine 3s infinite;
+}
+
+@keyframes shine{
+    to{background-position:200%;}
+}
+
+.line{
+    width:70px;
+    height:2px;
+    margin:20px auto;
+    background:#ff72d0;
+    box-shadow:0 0 15px #ff72d0;
+}
+
+.message{
+    font-size:16px;
+    line-height:1.8;
+    color:#eee;
+}
+
+.highlight{
+    color:#ff9cdf;
+    font-weight:bold;
+}
+
+/* ---------- SECRET BUTTON ---------- */
+
+.secret{
+    margin-top:25px;
+    padding:12px 25px;
+    border:0;
+    border-radius:30px;
+    background:white;
+    color:#4b0648;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.secret:hover{
+    transform:scale(1.08);
+}
+
+/* ---------- FINAL MESSAGE ---------- */
+
+.final{
+    position:fixed;
+    inset:0;
+    z-index:50;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    background:rgba(5,0,8,.96);
+    opacity:0;
+    visibility:hidden;
+    transition:1s;
+}
+
+.final.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.final-box{
+    max-width:400px;
+    animation:zoom 1s;
+}
+
+.final-box h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.final-box p{
+    font-size:17px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+@keyframes zoom{
+    from{transform:scale(.4);opacity:0}
+    to{transform:scale(1);opacity:1}
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    font-size:20px;
+    animation:rise linear forwards;
+    pointer-events:none;
+    z-index:4;
+}
+
+@keyframes rise{
     to{
         transform:translateY(-110vh) rotate(360deg);
         opacity:0;
     }
 }
 
-@keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(720deg);
-        opacity:0;
-    }
+/* progress bar like reel */
+
+.progress{
+    position:fixed;
+    top:12px;
+    left:10%;
+    width:80%;
+    height:3px;
+    background:rgba(255,255,255,.2);
+    z-index:100;
+    border-radius:10px;
 }
 
-@media(max-width:480px){
-    .card{
-        padding:30px 20px;
-    }
-
-    .message{
-        font-size:14px;
-    }
+.progress span{
+    display:block;
+    height:100%;
+    width:0;
+    background:white;
+    animation:progress 12s linear forwards;
 }
+
+@keyframes progress{
+    to{width:100%}
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- INTRO SCREEN -->
+
+<div class="intro" id="intro">
+    <small>A LITTLE SURPRISE</small>
+
+    <h1>For Neha 💗</h1>
+
+    <button class="start" onclick="startSurprise()">
+        Tap to open ✨
+    </button>
+</div>
+
+
+<!-- MAIN -->
+
+<div class="main" id="main">
+
+    <div class="bg"></div>
+
+    <div class="stars" id="stars"></div>
+
+    <div class="progress">
+        <span></span>
+    </div>
 
     <div class="card">
 
-        <div id="intro">
+        <div class="emoji">🎂</div>
 
-            <div class="small">A LITTLE SURPRISE FOR</div>
+        <h1>Happy Birthday</h1>
 
-            <h1>Neha ❤️</h1>
+        <h2 style="margin-top:8px;color:#ff9cdf;">
+            Neha 💗
+        </h2>
 
-            <div class="subtitle">
-                Some birthdays deserve more than just a simple
-                “Happy Birthday.”
-            </div>
+        <div class="line"></div>
 
-            <button onclick="openSurprise()">
-                Open Your Surprise 🎁
-            </button>
+        <p class="message">
+            Today is your special day,
+            so I just wanted to say...
 
-        </div>
+            <br><br>
+
+            <span class="highlight">
+                Happy Birthday! 🎉
+            </span>
+
+            <br><br>
+
+            May your days be filled with
+            happiness, beautiful memories,
+            and countless reasons to smile.
+
+            <br><br>
+
+            Stay happy. Stay amazing.
+            And keep that beautiful smile always. ✨
+        </p>
+
+        <button class="secret" onclick="openSecret()">
+            One more thing... 💌
+        </button>
+
+    </div>
+
+</div>
 
 
-        <div id="surprise">
+<!-- SECRET -->
 
-            <div class="small">HAPPY BIRTHDAY</div>
+<div class="final" id="final">
 
-            <h1>Neha ❤️</h1>
+    <div class="final-box">
 
-            <div class="message">
+        <div style="font-size:65px;">💗</div>
 
-                <p>
-                    Happy Birthday! 🥹❤️🎂
-                </p>
+        <h2>For You, Neha</h2>
 
-                <p>
-                    I hope your special day is filled with happiness,
-                    beautiful moments, good people, and lots of reasons
-                    to smile. May this new year of your life bring you
-                    good health, success, peace, amazing opportunities,
-                    and everything you genuinely wish for. ✨
-                </p>
+        <p>
+            I don't know where life takes us,
+            but I'm genuinely happy that
+            I got to know someone like you.
 
-                <p>
-                    I hope you achieve all your dreams and goals,
-                    make countless beautiful memories, and experience
-                    many new and exciting things in the year ahead.
-                    May every new chapter bring something better into
-                    your life.
-                </p>
+            <br><br>
 
-                <p>
-                    Keep smiling, keep being yourself, and always
-                    remember to enjoy the little moments. I hope you
-                    have people around you who make you happy and
-                    memories that stay with you for a long time. ❤️
-                </p>
+            No expectations.
+            Just a simple wish...
 
-                <p>
-                    Today is your day, so forget everything else for a
-                    while, enjoy yourself, eat some cake, take lots of
-                    pictures, and make the most of it. 🎂✨
-                </p>
+            <br><br>
 
-                <p>
-                    Once again, Happy Birthday, Neha!
-                    I genuinely wish you a beautiful year ahead filled
-                    with happiness, success, good health and many
-                    unforgettable moments.
-                </p>
+            <b style="color:#ff8edb;">
+                May you always be happy. 🌷
+            </b>
+        </p>
 
-            </div>
-
-            <div class="signature">
-                Stay happy. Keep smiling. ❤️
-                <br><br>
-                — Sunil 🫶
-            </div>
-
+        <div style="margin-top:25px;font-size:14px;opacity:.6;">
+            — from someone who wishes you well ✨
         </div>
 
     </div>
@@ -248,17 +400,47 @@ button:hover{
 
 <script>
 
-function openSurprise(){
+/* START */
 
-    document.getElementById("intro").style.display="none";
+function startSurprise(){
 
-    document.getElementById("surprise").style.display="block";
+    document.getElementById("intro")
+    .classList.add("hide");
 
-    createConfetti();
+    document.getElementById("main")
+    .classList.add("show");
 
-    setInterval(createHeart,500);
+    createStars();
+
+    setInterval(createHeart,450);
+
 }
 
+
+/* STARS */
+
+function createStars(){
+
+    const container=document.getElementById("stars");
+
+    for(let i=0;i<70;i++){
+
+        const star=document.createElement("span");
+
+        star.className="star";
+
+        star.style.left=Math.random()*100+"%";
+        star.style.top=Math.random()*100+"%";
+
+        star.style.animationDelay=
+            Math.random()*2+"s";
+
+        container.appendChild(star);
+    }
+}
+
+
+/* HEARTS */
 
 function createHeart(){
 
@@ -266,50 +448,46 @@ function createHeart(){
 
     heart.className="heart";
 
-    const hearts=["❤️","🫶","💗","💕","✨"];
+    const emojis=[
+        "💗","💖","💕","✨","💘","🌸"
+    ];
 
-    heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+    heart.innerHTML=
+        emojis[Math.floor(Math.random()*emojis.length)];
 
-    heart.style.left=Math.random()*100+"vw";
+    heart.style.left=Math.random()*100+"%";
 
-    heart.style.animationDuration=(4+Math.random()*4)+"s";
+    heart.style.animationDuration=
+        (5+Math.random()*5)+"s";
+
+    heart.style.fontSize=
+        (15+Math.random()*20)+"px";
 
     document.body.appendChild(heart);
 
     setTimeout(()=>{
         heart.remove();
-    },8000);
+    },10000);
 }
 
 
-function createConfetti(){
+/* SECRET */
 
-    for(let i=0;i<80;i++){
+function openSecret(){
 
-        const piece=document.createElement("div");
+    document.getElementById("final")
+    .classList.add("active");
 
-        piece.className="confetti";
+    for(let i=0;i<35;i++){
 
-        piece.style.left=Math.random()*100+"vw";
+        setTimeout(createHeart,i*80);
 
-        piece.style.animationDelay=Math.random()*2+"s";
-
-        piece.style.transform=
-            "rotate("+Math.random()*360+"deg)";
-
-        piece.style.background=
-            ["#ff4fa3","#ffd166","#7bdff2","#c77dff","#ffffff"]
-            [Math.floor(Math.random()*5)];
-
-        document.body.appendChild(piece);
-
-        setTimeout(()=>{
-            piece.remove();
-        },5000);
     }
+
 }
 
 </script>
 
 </body>
 </html>
+
