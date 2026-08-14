@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Neha ❤️</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    background:linear-gradient(135deg,#16001f,#3b0a45,#120018);
+    color:white;
+    overflow-x:hidden;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:25px;
+    position:relative;
+}
+
+.card{
+    width:100%;
+    max-width:520px;
+    padding:35px 25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border-radius:28px;
+    box-shadow:0 20px 70px rgba(0,0,0,.45);
+    animation:fadeUp 1.2s ease;
+}
+
+.small{
+    font-size:14px;
+    letter-spacing:3px;
+    opacity:.75;
+    margin-bottom:15px;
+}
+
+h1{
+    font-size:clamp(38px,11vw,68px);
+    margin-bottom:10px;
+    background:linear-gradient(90deg,#fff,#ffb6e8,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.subtitle{
+    font-size:16px;
+    line-height:1.7;
+    opacity:.85;
+    margin-bottom:28px;
+}
+
+button{
+    border:0;
+    padding:15px 28px;
+    border-radius:50px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    background:white;
+    color:#5b0b58;
+    box-shadow:0 8px 30px rgba(255,255,255,.18);
+    transition:.3s;
+}
+
+button:hover{
+    transform:translateY(-3px) scale(1.03);
+}
+
+#surprise{
+    display:none;
+    animation:fadeUp 1s ease;
+}
+
+.message{
+    margin-top:25px;
+    text-align:left;
+    line-height:1.8;
+    font-size:15px;
+    opacity:.92;
+}
+
+.message p{
+    margin-bottom:16px;
+}
+
+.signature{
+    text-align:center;
+    margin-top:25px;
+    font-size:18px;
+}
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:20px;
+    animation:floatUp linear forwards;
+    pointer-events:none;
+    opacity:.8;
+}
+
+.confetti{
+    position:fixed;
+    width:8px;
+    height:14px;
+    top:-20px;
+    animation:fall 3s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes floatUp{
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+@media(max-width:480px){
+    .card{
+        padding:30px 20px;
+    }
+
+    .message{
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div id="intro">
+
+            <div class="small">A LITTLE SURPRISE FOR</div>
+
+            <h1>Neha ❤️</h1>
+
+            <div class="subtitle">
+                Some birthdays deserve more than just a simple
+                “Happy Birthday.”
+            </div>
+
+            <button onclick="openSurprise()">
+                Open Your Surprise 🎁
+            </button>
+
+        </div>
+
+
+        <div id="surprise">
+
+            <div class="small">HAPPY BIRTHDAY</div>
+
+            <h1>Neha ❤️</h1>
+
+            <div class="message">
+
+                <p>
+                    Happy Birthday! 🥹❤️🎂
+                </p>
+
+                <p>
+                    I hope your special day is filled with happiness,
+                    beautiful moments, good people, and lots of reasons
+                    to smile. May this new year of your life bring you
+                    good health, success, peace, amazing opportunities,
+                    and everything you genuinely wish for. ✨
+                </p>
+
+                <p>
+                    I hope you achieve all your dreams and goals,
+                    make countless beautiful memories, and experience
+                    many new and exciting things in the year ahead.
+                    May every new chapter bring something better into
+                    your life.
+                </p>
+
+                <p>
+                    Keep smiling, keep being yourself, and always
+                    remember to enjoy the little moments. I hope you
+                    have people around you who make you happy and
+                    memories that stay with you for a long time. ❤️
+                </p>
+
+                <p>
+                    Today is your day, so forget everything else for a
+                    while, enjoy yourself, eat some cake, take lots of
+                    pictures, and make the most of it. 🎂✨
+                </p>
+
+                <p>
+                    Once again, Happy Birthday, Neha!
+                    I genuinely wish you a beautiful year ahead filled
+                    with happiness, success, good health and many
+                    unforgettable moments.
+                </p>
+
+            </div>
+
+            <div class="signature">
+                Stay happy. Keep smiling. ❤️
+                <br><br>
+                — Sunil 🫶
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function openSurprise(){
+
+    document.getElementById("intro").style.display="none";
+
+    document.getElementById("surprise").style.display="block";
+
+    createConfetti();
+
+    setInterval(createHeart,500);
+}
+
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="heart";
+
+    const hearts=["❤️","🫶","💗","💕","✨"];
+
+    heart.innerHTML=hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left=Math.random()*100+"vw";
+
+    heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+
+function createConfetti(){
+
+    for(let i=0;i<80;i++){
+
+        const piece=document.createElement("div");
+
+        piece.className="confetti";
+
+        piece.style.left=Math.random()*100+"vw";
+
+        piece.style.animationDelay=Math.random()*2+"s";
+
+        piece.style.transform=
+            "rotate("+Math.random()*360+"deg)";
+
+        piece.style.background=
+            ["#ff4fa3","#ffd166","#7bdff2","#c77dff","#ffffff"]
+            [Math.floor(Math.random()*5)];
+
+        document.body.appendChild(piece);
+
+        setTimeout(()=>{
+            piece.remove();
+        },5000);
+    }
+}
+
+</script>
+
+</body>
+</html>
