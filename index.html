@@ -33,8 +33,6 @@ body.lock{
   overflow:hidden;
 }
 
-/* ================= BACKGROUND ================= */
-
 .background{
   position:fixed;
   inset:0;
@@ -102,8 +100,6 @@ body.lock{
   }
 }
 
-/* ================= PARTICLES ================= */
-
 #particles{
   position:fixed;
   inset:0;
@@ -127,22 +123,13 @@ body.lock{
     transform:translateY(110vh) scale(.3);
     opacity:0;
   }
-
-  15%{
-    opacity:.7;
-  }
-
-  80%{
-    opacity:.5;
-  }
-
+  15%{opacity:.7}
+  80%{opacity:.5}
   100%{
     transform:translateY(-10vh) scale(1);
     opacity:0;
   }
 }
-
-/* ================= INTRO ================= */
 
 #intro{
   position:fixed;
@@ -153,7 +140,6 @@ body.lock{
   justify-content:center;
   text-align:center;
   padding:25px;
-
   background:
     radial-gradient(
       circle at center,
@@ -161,7 +147,6 @@ body.lock{
       transparent 40%
     ),
     #08000e;
-
   transition:
     opacity 1s ease,
     transform 1.2s cubic-bezier(.7,0,.2,1),
@@ -186,7 +171,6 @@ body.lock{
   text-transform:uppercase;
   color:#f1add8;
   margin-bottom:22px;
-
   opacity:0;
   animation:fadeUp 1s .2s forwards;
 }
@@ -195,7 +179,6 @@ body.lock{
   font-family:"Playfair Display",serif;
   font-size:clamp(48px,14vw,75px);
   line-height:.95;
-
   background:
     linear-gradient(
       120deg,
@@ -204,14 +187,10 @@ body.lock{
       #c5a8ff,
       #fff
     );
-
   background-size:300%;
-
   -webkit-background-clip:text;
   color:transparent;
-
   opacity:0;
-
   animation:
     fadeUp 1s .45s forwards,
     gradientMove 5s linear infinite;
@@ -221,42 +200,31 @@ body.lock{
   color:#d6c6d9;
   margin-top:20px;
   font-size:16px;
-
   opacity:0;
   animation:fadeUp 1s .7s forwards;
 }
 
 .openBtn{
   margin-top:38px;
-
   border:1px solid rgba(255,255,255,.2);
-
   color:#fff;
-
   background:
     linear-gradient(
       135deg,
       rgba(255,75,175,.28),
       rgba(115,75,255,.28)
     );
-
   backdrop-filter:blur(20px);
-
   padding:16px 30px;
   border-radius:100px;
-
   font-size:15px;
   font-weight:700;
-
   box-shadow:
     0 0 30px rgba(255,70,175,.25);
-
   opacity:0;
-
   animation:
     fadeUp 1s 1s forwards,
     glowButton 2.5s 2s infinite;
-
   transition:.3s;
 }
 
@@ -276,7 +244,6 @@ body.lock{
     opacity:0;
     transform:translateY(25px);
   }
-
   to{
     opacity:1;
     transform:translateY(0);
@@ -288,8 +255,6 @@ body.lock{
     background-position:300%;
   }
 }
-
-/* ================= MAIN ================= */
 
 main{
   opacity:0;
@@ -316,32 +281,21 @@ section{
   text-align:center;
 }
 
-/* ================= MUSIC ================= */
-
 .music{
   position:fixed;
   right:16px;
   top:16px;
-
   width:44px;
   height:44px;
-
   border-radius:50%;
-
   border:1px solid rgba(255,255,255,.15);
-
   background:rgba(20,5,25,.6);
-
   backdrop-filter:blur(15px);
-
   color:#fff;
-
   display:none;
   align-items:center;
   justify-content:center;
-
   z-index:90;
-
   font-size:18px;
 }
 
@@ -359,37 +313,23 @@ section{
   }
 }
 
-/* ================= HERO ================= */
-
 .badge{
   display:inline-block;
-
   padding:8px 14px;
-
   border-radius:100px;
-
   background:rgba(255,255,255,.07);
-
   border:1px solid rgba(255,255,255,.12);
-
   color:#f4afd9;
-
   font-size:11px;
-
   letter-spacing:2px;
-
   text-transform:uppercase;
-
   margin-bottom:25px;
 }
 
 .heroTitle{
   font-family:"Playfair Display",serif;
-
   font-size:clamp(48px,14vw,85px);
-
   line-height:.95;
-
   background:
     linear-gradient(
       135deg,
@@ -398,53 +338,36 @@ section{
       #bfa2ff,
       #fff
     );
-
   background-size:250%;
-
   -webkit-background-clip:text;
-
   color:transparent;
-
   animation:gradientMove 6s linear infinite;
 }
 
 .heroText{
   margin:25px auto 0;
-
   max-width:470px;
-
   color:#d7c8da;
-
   font-size:15px;
-
   line-height:1.7;
 }
 
 .photoBtn{
   margin-top:30px;
-
   padding:16px 28px;
-
   border:1px solid rgba(255,255,255,.18);
-
   border-radius:100px;
-
   background:
     linear-gradient(
       135deg,
       rgba(255,75,175,.7),
       rgba(115,70,255,.7)
     );
-
   color:white;
-
   font-size:15px;
-
   font-weight:700;
-
   box-shadow:
     0 0 30px rgba(255,70,175,.3);
-
   animation:photoPulse 2s infinite;
 }
 
@@ -457,13 +380,9 @@ section{
 
 .scrollHint{
   margin-top:45px;
-
   color:#9f91a3;
-
   font-size:11px;
-
   letter-spacing:3px;
-
   animation:bounce 2s infinite;
 }
 
@@ -473,64 +392,44 @@ section{
   }
 }
 
-/* ================= PHOTOS ================= */
-
 .photoSection{
   min-height:100vh;
 }
 
 .sectionLabel{
   color:#d99ac6;
-
   font-size:11px;
-
   text-transform:uppercase;
-
   letter-spacing:3px;
-
   margin-bottom:14px;
 }
 
 .sectionTitle{
   font-family:"Playfair Display",serif;
-
   font-size:clamp(34px,9vw,52px);
-
   margin-bottom:30px;
 }
 
 .photoGrid{
   display:grid;
-
   grid-template-columns:1fr 1fr;
-
   gap:12px;
-
   margin-top:20px;
 }
 
 .photoCard{
   position:relative;
-
   height:310px;
-
   overflow:hidden;
-
   border-radius:24px;
-
   border:1px solid rgba(255,255,255,.15);
-
   background:rgba(255,255,255,.05);
-
   box-shadow:
     0 20px 55px rgba(0,0,0,.4);
-
   opacity:0;
-
   transform:
     translateY(60px)
     scale(.92);
-
   transition:
     opacity .9s ease,
     transform .9s cubic-bezier(.2,.8,.2,1);
@@ -538,7 +437,6 @@ section{
 
 .photoCard.show{
   opacity:1;
-
   transform:
     translateY(0)
     scale(1);
@@ -547,11 +445,8 @@ section{
 .photoCard img{
   width:100%;
   height:100%;
-
   display:block;
-
   object-fit:cover;
-
   transition:transform 1s ease;
 }
 
@@ -561,9 +456,7 @@ section{
 
 .photoGlow{
   position:absolute;
-
   inset:0;
-
   background:
     linear-gradient(
       120deg,
@@ -571,9 +464,7 @@ section{
       rgba(255,255,255,.22),
       transparent 80%
     );
-
   transform:translateX(-120%);
-
   animation:shine 4s infinite;
 }
 
@@ -581,7 +472,6 @@ section{
   0%,50%{
     transform:translateX(-120%);
   }
-
   75%,100%{
     transform:translateX(120%);
   }
@@ -589,46 +479,32 @@ section{
 
 .photoText{
   margin-top:25px;
-
   color:#cdbed1;
-
   font-size:14px;
-
   line-height:1.7;
 }
 
-/* ================= CARDS ================= */
-
 .cards{
   display:grid;
-
   gap:15px;
 }
 
 .card{
   text-align:left;
-
   padding:26px;
-
   border-radius:24px;
-
   background:
     linear-gradient(
       135deg,
       rgba(255,255,255,.09),
       rgba(255,255,255,.025)
     );
-
   border:1px solid rgba(255,255,255,.11);
-
   backdrop-filter:blur(18px);
-
   opacity:0;
-
   transform:
     translateY(50px)
     rotateX(8deg);
-
   transition:
     opacity .8s ease,
     transform .8s cubic-bezier(.2,.8,.2,1);
@@ -636,7 +512,6 @@ section{
 
 .card.visible{
   opacity:1;
-
   transform:
     translateY(0)
     rotateX(0);
@@ -648,42 +523,31 @@ section{
 
 .cardIcon{
   font-size:27px;
-
   margin-bottom:15px;
 }
 
 .card h3{
   font-size:19px;
-
   margin-bottom:9px;
 }
 
 .card p{
   color:#c8b9cd;
-
   line-height:1.65;
-
   font-size:14px;
 }
-
-/* ================= CAKE ================= */
 
 .cake{
   width:230px;
   height:190px;
-
   position:relative;
-
   margin:60px auto 20px;
-
   cursor:pointer;
-
   filter:
     drop-shadow(
       0 20px 35px
       rgba(255,70,180,.25)
     );
-
   transition:.3s;
 }
 
@@ -693,27 +557,20 @@ section{
 
 .plate{
   position:absolute;
-
   width:245px;
   height:18px;
-
   left:-7px;
   bottom:3px;
-
   border-radius:50%;
-
   background:
     linear-gradient(#eee,#aaa);
-
   box-shadow:
     0 8px 25px rgba(255,255,255,.1);
 }
 
 .layer{
   position:absolute;
-
   border-radius:12px;
-
   background:
     linear-gradient(
       90deg,
@@ -721,7 +578,6 @@ section{
       #ffb1dd,
       #e85aab
     );
-
   box-shadow:
     inset 0 -10px 15px rgba(180,35,115,.2),
     0 10px 20px rgba(0,0,0,.2);
@@ -730,7 +586,6 @@ section{
 .bottomLayer{
   width:200px;
   height:58px;
-
   left:15px;
   bottom:20px;
 }
@@ -738,39 +593,29 @@ section{
 .topLayer{
   width:185px;
   height:55px;
-
   left:22px;
   bottom:70px;
 }
 
 .frosting{
   position:absolute;
-
   width:185px;
   height:20px;
-
   left:22px;
   top:66px;
-
   border-radius:50%;
-
   background:#fff0fa;
-
   box-shadow:
     0 4px 0 #ffc3e5;
 }
 
 .drip{
   position:absolute;
-
   width:14px;
   height:28px;
-
   top:75px;
-
   border-radius:
     0 0 10px 10px;
-
   background:#fff0fa;
 }
 
@@ -788,14 +633,10 @@ section{
 
 .candle{
   position:absolute;
-
   width:12px;
   height:45px;
-
   bottom:123px;
-
   border-radius:5px;
-
   background:
     linear-gradient(
       90deg,
@@ -803,36 +644,27 @@ section{
       #ff8bd0,
       #fff
     );
-
   z-index:5;
 }
 
 .c1{left:65px}
-
 .c2{left:108px}
-
 .c3{left:150px}
 
 .flame{
   position:absolute;
-
   width:16px;
   height:24px;
-
   left:-2px;
   top:-22px;
-
   border-radius:50%;
-
   background:
     linear-gradient(
       #fff5a0,
       #ff8a32
     );
-
   box-shadow:
     0 0 22px #ff9b37;
-
   animation:flame 1s infinite alternate;
 }
 
@@ -840,7 +672,6 @@ section{
   from{
     transform:scale(.85) rotate(-4deg);
   }
-
   to{
     transform:scale(1.1) rotate(5deg);
   }
@@ -848,39 +679,27 @@ section{
 
 .cake.out .flame{
   opacity:0;
-
   transform:scale(.1);
-
   animation:none;
-
   transition:.4s;
 }
 
 .cakeMessage{
   opacity:0;
-
   transform:translateY(20px);
-
   transition:.8s;
-
   font-family:"Playfair Display",serif;
-
   font-size:30px;
-
   color:#ffd3ee;
 }
 
 .cakeMessage.show{
   opacity:1;
-
   transform:translateY(0);
 }
 
-/* ================= FINAL ================= */
-
 .final{
   min-height:100vh;
-
   background:
     radial-gradient(
       circle at center,
@@ -891,11 +710,8 @@ section{
 
 .finalTitle{
   font-family:"Playfair Display",serif;
-
   font-size:clamp(42px,11vw,70px);
-
   line-height:1.05;
-
   background:
     linear-gradient(
       120deg,
@@ -904,57 +720,44 @@ section{
       #c5a8ff,
       #fff
     );
-
   background-size:250%;
-
   -webkit-background-clip:text;
-
   color:transparent;
-
   animation:gradientMove 6s linear infinite;
 }
 
 .finalText{
   color:#d4c5d8;
-
   line-height:1.8;
-
   margin:25px auto;
-
   max-width:500px;
-
   font-size:15px;
 }
 
+.signature{
+  margin-top:25px;
+  color:#f3b7dc;
+  font-family:"Playfair Display",serif;
+  font-size:19px;
+  letter-spacing:1.5px;
+}
+
 .replay{
-  margin-top:15px;
-
+  margin-top:28px;
   padding:14px 25px;
-
   border-radius:100px;
-
   background:rgba(255,255,255,.08);
-
   border:1px solid rgba(255,255,255,.16);
-
   color:#fff;
-
   font-weight:700;
 }
 
-/* ================= HEARTS ================= */
-
 .heart{
   position:fixed;
-
   color:#ff8bd1;
-
   font-size:20px;
-
   pointer-events:none;
-
   z-index:-1;
-
   animation:heartFloat linear forwards;
 }
 
@@ -964,36 +767,26 @@ section{
       translateY(105vh)
       rotate(0)
       scale(.5);
-
     opacity:0;
   }
-
   15%{
     opacity:.6;
   }
-
   100%{
     transform:
       translateY(-120px)
       rotate(30deg)
       scale(1.1);
-
     opacity:0;
   }
 }
 
-/* ================= CONFETTI ================= */
-
 .confetti{
   position:fixed;
-
   width:8px;
   height:12px;
-
   z-index:200;
-
   pointer-events:none;
-
   animation:
     confettiFall 2.8s
     cubic-bezier(.1,.7,.2,1)
@@ -1005,20 +798,15 @@ section{
     transform:
       translate(0,0)
       rotate(0);
-
     opacity:1;
   }
-
   100%{
     transform:
       translate(var(--x),var(--y))
       rotate(var(--r));
-
     opacity:0;
   }
 }
-
-/* ================= MOBILE ================= */
 
 @media(max-width:480px){
 
@@ -1046,8 +834,6 @@ section{
 
 }
 
-/* ================= DESKTOP ================= */
-
 @media(min-width:700px){
 
   .cards{
@@ -1065,20 +851,13 @@ section{
 
 <body class="lock">
 
-<!-- BACKGROUND -->
-
 <div class="background">
-
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
   <div class="orb orb3"></div>
-
 </div>
 
 <div id="particles"></div>
-
-
-<!-- ================= INTRO ================= -->
 
 <div id="intro">
 
@@ -1104,20 +883,11 @@ section{
 
 </div>
 
-
-<!-- MUSIC -->
-
 <button class="music" id="musicBtn">
   ♫
 </button>
 
-
-<!-- ================= MAIN ================= -->
-
 <main id="main">
-
-
-<!-- ================= HERO ================= -->
 
 <section>
 
@@ -1150,9 +920,6 @@ section{
 
 </section>
 
-
-<!-- ================= PHOTOS ================= -->
-
 <section class="photoSection" id="photos">
 
   <div class="container">
@@ -1178,7 +945,6 @@ section{
 
       </div>
 
-
       <div class="photoCard">
 
         <img
@@ -1200,9 +966,6 @@ section{
   </div>
 
 </section>
-
-
-<!-- ================= CARDS ================= -->
 
 <section>
 
@@ -1235,7 +998,6 @@ section{
 
       </div>
 
-
       <div class="card">
 
         <div class="cardIcon">
@@ -1252,7 +1014,6 @@ section{
         </p>
 
       </div>
-
 
       <div class="card">
 
@@ -1277,9 +1038,6 @@ section{
 
 </section>
 
-
-<!-- ================= CAKE ================= -->
-
 <section>
 
   <div class="container">
@@ -1295,7 +1053,6 @@ section{
     <p class="heroText">
       Tap the cake and blow out the candles.
     </p>
-
 
     <div class="cake" id="cake">
 
@@ -1324,7 +1081,6 @@ section{
 
     </div>
 
-
     <div class="cakeMessage" id="cakeMessage">
       Make a wish, Neha 🌙✨
     </div>
@@ -1332,9 +1088,6 @@ section{
   </div>
 
 </section>
-
-
-<!-- ================= FINAL ================= -->
 
 <section class="final">
 
@@ -1357,6 +1110,10 @@ section{
       your day! ✨
     </p>
 
+    <div class="signature">
+      — Sunil Ratoki
+    </div>
+
     <button class="replay" id="replay">
       Replay Surprise ↻
     </button>
@@ -1365,13 +1122,9 @@ section{
 
 </section>
 
-
 </main>
 
-
 <script>
-
-/* ================= PARTICLES ================= */
 
 const particleBox =
 document.getElementById("particles");
@@ -1400,9 +1153,6 @@ for(let i=0;i<55;i++){
 
   particleBox.appendChild(p);
 }
-
-
-/* ================= HEARTS ================= */
 
 function createHeart(){
 
@@ -1445,9 +1195,6 @@ function createHeart(){
 
 setInterval(createHeart,700);
 
-
-/* ================= OPEN ================= */
-
 const intro =
 document.getElementById("intro");
 
@@ -1487,9 +1234,6 @@ openBtn.addEventListener("click",()=>{
 
 });
 
-
-/* ================= PHOTO BUTTON ================= */
-
 const photoBtn =
 document.getElementById("photoBtn");
 
@@ -1526,9 +1270,6 @@ photoBtn.addEventListener("click",()=>{
 
 });
 
-
-/* ================= PHOTO OBSERVER ================= */
-
 const photoObserver =
 new IntersectionObserver(
 (entries)=>{
@@ -1559,9 +1300,6 @@ new IntersectionObserver(
 photoObserver.observe(
 document.getElementById("photos")
 );
-
-
-/* ================= CARDS ================= */
 
 const cards =
 document.querySelectorAll(".card");
@@ -1595,9 +1333,6 @@ new IntersectionObserver(
 cards.forEach(card=>{
   cardObserver.observe(card);
 });
-
-
-/* ================= CAKE ================= */
 
 const cake =
 document.getElementById("cake");
@@ -1699,9 +1434,6 @@ cake.addEventListener("click",()=>{
 
 });
 
-
-/* ================= CONFETTI ================= */
-
 function createConfetti(x,y,count){
 
   const symbols=[
@@ -1769,12 +1501,11 @@ function createConfetti(x,y,count){
 }
 
 
-/* ================= MUSIC ================= */
+/* Soft magical birthday-style tune.
+   Starts only when the music button is tapped. */
 
 let audioContext=null;
-
 let musicPlaying=false;
-
 let musicTimer=null;
 
 function playTone(freq,duration,time){
@@ -1822,20 +1553,30 @@ function playTone(freq,duration,time){
 
 function startMusic(){
 
-  audioContext =
-  new(
-    window.AudioContext ||
-    window.webkitAudioContext
-  )();
+  if(!audioContext){
+
+    audioContext =
+    new(
+      window.AudioContext ||
+      window.webkitAudioContext
+    )();
+
+  }
+
+  audioContext.resume();
 
   const notes=[
     261.63,
     329.63,
-    392,
+    392.00,
+    523.25,
+    392.00,
     329.63,
     293.66,
     349.23,
-    440,
+    440.00,
+    523.25,
+    440.00,
     349.23
   ];
 
@@ -1850,7 +1591,7 @@ function startMusic(){
 
     playTone(
       notes[index],
-      1.2,
+      1.4,
       now
     );
 
@@ -1858,7 +1599,7 @@ function startMusic(){
     (index+1)%notes.length;
 
     musicTimer =
-    setTimeout(loop,850);
+    setTimeout(loop,720);
 
   }
 
@@ -1874,17 +1615,7 @@ musicBtn.addEventListener("click",()=>{
 
     musicBtn.classList.add("playing");
 
-    if(!audioContext){
-
-      startMusic();
-
-    }else{
-
-      audioContext.resume();
-
-      startMusic();
-
-    }
+    startMusic();
 
   }else{
 
@@ -1901,9 +1632,6 @@ musicBtn.addEventListener("click",()=>{
   }
 
 });
-
-
-/* ================= REPLAY ================= */
 
 document
 .getElementById("replay")
