@@ -473,7 +473,7 @@ section{
   }
 }
 
-/* ================= PHOTO SECTION ================= */
+/* ================= PHOTOS ================= */
 
 .photoSection{
   min-height:100vh;
@@ -775,10 +775,12 @@ section{
 }
 
 .d1{left:47px}
+
 .d2{
   left:90px;
   height:20px;
 }
+
 .d3{
   right:53px;
   height:32px;
@@ -806,7 +808,9 @@ section{
 }
 
 .c1{left:65px}
+
 .c2{left:108px}
+
 .c3{left:150px}
 
 .flame{
@@ -1056,20 +1060,6 @@ section{
   }
 
 }
-
-/* ================= REDUCED MOTION ================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  *,
-  *::before,
-  *::after{
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    scroll-behavior:auto!important;
-  }
-
-}
 </style>
 </head>
 
@@ -1180,7 +1170,7 @@ section{
       <div class="photoCard">
 
         <img
-          src="Neha1.jpeg"
+          src="https://raw.githubusercontent.com/sunilratoki3-hash/-neha-birthday/main/Neha1.jpeg"
           alt="Neha photo 1"
         >
 
@@ -1192,7 +1182,7 @@ section{
       <div class="photoCard">
 
         <img
-          src="Neha2.jpeg"
+          src="https://raw.githubusercontent.com/sunilratoki3-hash/-neha-birthday/main/Neha2.jpeg"
           alt="Neha photo 2"
         >
 
@@ -1383,29 +1373,29 @@ section{
 
 /* ================= PARTICLES ================= */
 
-const particleBox=
+const particleBox =
 document.getElementById("particles");
 
 for(let i=0;i<55;i++){
 
-  const p=
+  const p =
   document.createElement("div");
 
   p.className="particle";
 
-  p.style.left=
+  p.style.left =
   Math.random()*100+"%";
 
-  p.style.animationDuration=
+  p.style.animationDuration =
   5+Math.random()*10+"s";
 
-  p.style.animationDelay=
+  p.style.animationDelay =
   -Math.random()*10+"s";
 
-  p.style.width=
+  p.style.width =
   1+Math.random()*3+"px";
 
-  p.style.height=
+  p.style.height =
   p.style.width;
 
   particleBox.appendChild(p);
@@ -1416,7 +1406,7 @@ for(let i=0;i<55;i++){
 
 function createHeart(){
 
-  const heart=
+  const heart =
   document.createElement("div");
 
   heart.className="heart";
@@ -1429,20 +1419,20 @@ function createHeart(){
     "✿"
   ];
 
-  heart.textContent=
+  heart.textContent =
   symbols[
     Math.floor(
       Math.random()*symbols.length
     )
   ];
 
-  heart.style.left=
+  heart.style.left =
   Math.random()*100+"%";
 
-  heart.style.fontSize=
+  heart.style.fontSize =
   12+Math.random()*18+"px";
 
-  heart.style.animationDuration=
+  heart.style.animationDuration =
   5+Math.random()*6+"s";
 
   document.body.appendChild(heart);
@@ -1458,16 +1448,16 @@ setInterval(createHeart,700);
 
 /* ================= OPEN ================= */
 
-const intro=
+const intro =
 document.getElementById("intro");
 
-const main=
+const main =
 document.getElementById("main");
 
-const openBtn=
+const openBtn =
 document.getElementById("openBtn");
 
-const musicBtn=
+const musicBtn =
 document.getElementById("musicBtn");
 
 openBtn.addEventListener("click",()=>{
@@ -1500,10 +1490,10 @@ openBtn.addEventListener("click",()=>{
 
 /* ================= PHOTO BUTTON ================= */
 
-const photoBtn=
+const photoBtn =
 document.getElementById("photoBtn");
 
-const photos=
+const photos =
 document.querySelectorAll(".photoCard");
 
 photoBtn.addEventListener("click",()=>{
@@ -1539,7 +1529,7 @@ photoBtn.addEventListener("click",()=>{
 
 /* ================= PHOTO OBSERVER ================= */
 
-const photoObserver=
+const photoObserver =
 new IntersectionObserver(
 (entries)=>{
 
@@ -1573,10 +1563,10 @@ document.getElementById("photos")
 
 /* ================= CARDS ================= */
 
-const cards=
+const cards =
 document.querySelectorAll(".card");
 
-const cardObserver=
+const cardObserver =
 new IntersectionObserver(
 (entries)=>{
 
@@ -1584,7 +1574,7 @@ new IntersectionObserver(
 
     if(entry.isIntersecting){
 
-      const index=
+      const index =
       [...cards].indexOf(entry.target);
 
       setTimeout(()=>{
@@ -1609,10 +1599,10 @@ cards.forEach(card=>{
 
 /* ================= CAKE ================= */
 
-const cake=
+const cake =
 document.getElementById("cake");
 
-const cakeMessage=
+const cakeMessage =
 document.getElementById("cakeMessage");
 
 let cakeClicked=false;
@@ -1637,10 +1627,10 @@ cake.addEventListener("click",()=>{
 
     setTimeout(()=>{
 
-      const spark=
+      const spark =
       document.createElement("div");
 
-      spark.textContent=
+      spark.textContent =
       ["✨","💗","🌸","⭐","💫"]
       [Math.floor(Math.random()*5)];
 
@@ -1653,15 +1643,15 @@ cake.addEventListener("click",()=>{
 
       spark.style.pointerEvents="none";
 
-      spark.style.fontSize=
+      spark.style.fontSize =
       15+Math.random()*20+"px";
 
       document.body.appendChild(spark);
 
-      const x=
+      const x =
       (Math.random()-.5)*300;
 
-      const y=
+      const y =
       (Math.random()-.5)*300;
 
       spark.animate(
@@ -1725,12 +1715,12 @@ function createConfetti(x,y,count){
 
   for(let i=0;i<count;i++){
 
-    const c=
+    const c =
     document.createElement("div");
 
     c.className="confetti";
 
-    c.textContent=
+    c.textContent =
     symbols[
       Math.floor(
         Math.random()*symbols.length
@@ -1740,14 +1730,14 @@ function createConfetti(x,y,count){
     c.style.left=x+"px";
     c.style.top=y+"px";
 
-    c.style.color=
+    c.style.color =
     `hsl(
       ${Math.random()*360},
       85%,
       75%
     )`;
 
-    c.style.fontSize=
+    c.style.fontSize =
     8+Math.random()*9+"px";
 
     c.style.setProperty(
@@ -1791,10 +1781,10 @@ function playTone(freq,duration,time){
 
   if(!audioContext)return;
 
-  const osc=
+  const osc =
   audioContext.createOscillator();
 
-  const gain=
+  const gain =
   audioContext.createGain();
 
   osc.type="sine";
@@ -1832,7 +1822,7 @@ function playTone(freq,duration,time){
 
 function startMusic(){
 
-  audioContext=
+  audioContext =
   new(
     window.AudioContext ||
     window.webkitAudioContext
@@ -1855,7 +1845,7 @@ function startMusic(){
 
     if(!musicPlaying)return;
 
-    const now=
+    const now =
     audioContext.currentTime;
 
     playTone(
@@ -1864,10 +1854,10 @@ function startMusic(){
       now
     );
 
-    index=
+    index =
     (index+1)%notes.length;
 
-    musicTimer=
+    musicTimer =
     setTimeout(loop,850);
 
   }
@@ -1945,30 +1935,6 @@ document
     top:0,
     behavior:"instant"
   });
-
-});
-
-
-/* ================= TOUCH EFFECT ================= */
-
-document
-.querySelectorAll(".card,.photoCard")
-.forEach(element=>{
-
-  element.addEventListener(
-    "touchstart",
-    ()=>{
-      element.style.transform=
-      "scale(.97)";
-    }
-  );
-
-  element.addEventListener(
-    "touchend",
-    ()=>{
-      element.style.transform="";
-    }
-  );
 
 });
 
